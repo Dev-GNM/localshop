@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
-import "./App.css";
+import "../../App.css";
 import data from "./mock-data.json";
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
@@ -135,7 +135,9 @@ const Table = () => {
     <div className="app-container">
 
             {/* //<<<<--- table input form-->> */}
-          <h2>Add items</h2>
+          <div className="table-title">
+            <h2>Add items</h2>
+          </div>
           <form className="items-form" onSubmit={handleAddFormSubmit}>
             <input
               type="text"

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Tungli",
+    "item":"iphone 14",
+    "quantity": 300,
+    "date":null  
+  },
+  {
+    "id": 2,
+    "name": "Moja",
+    "item":"iphone x",
+    "quantity": 40,
+    "date":null
+  },
+  {
+    "id": 3,
+    "name": "Doro",
+    "item":"samsung 20",
+    "quantity": 40,
+    "date":null
+  },
+  {
+    "id": 4,
+    "name": "Njuguna",
+    "item":"techno",
+    "quantity": 40,
+    "date":null
+  },
+  {
+    "id": 5,
+    "name": "James",
+    "item":"itel",
+    "quantity": 5000,
+    "date":null
+  }
+]

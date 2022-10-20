@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import ClerkPage from './ClerkPage';
+import ClerkPage from './components/ClerkPage';
 
 function App() {
   return (
