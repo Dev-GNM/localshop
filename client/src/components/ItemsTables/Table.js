@@ -1,14 +1,19 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
+
 import { nanoid } from "nanoid";
 import "../../App.css";
 import data from "./mock-data.json";
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
+// import { useHistory } from 'react-router-dom';
 
 const Table = () => {
+  // const history = useHistory();
+
 
 
   //<<<<-----table functions---->>>
+  
   
   const [items, setItems] = useState(data);
   const [addFormData, setAddFormData] = useState({
@@ -21,6 +26,8 @@ const Table = () => {
     status:""
   });
 
+
+
   const [editFormData, setEditFormData] = useState({
     name: "",
     quantity: "",
@@ -30,6 +37,19 @@ const Table = () => {
     sellingPrice: "",
     status:""
   });
+
+
+  //populating the table with data from database
+  // useEffect(() => {
+  //   // auto-login
+  //   fetch("http://127.0.0.1:3000/items").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((item) => setItems(item));
+  //     }
+  //   });
+  // },[]);
+
+  //-----end
 
   const [editItemId, setEditContactId] = useState(null);
 
@@ -57,7 +77,26 @@ const Table = () => {
     setEditFormData(newFormData);
   };
 
+//........
+// function addMovieHandler(movieDetails){
+//   fetch('https://phase-2-project-599c2-default-rtdb.firebaseio.com/movies.json',
+//   {
+//    method:'POST',
+//    body:JSON.stringify(movieDetails),
+//    headers:{
+//           'Content-Type':'application/json'
+//    }
+//   }
+//   ).then(() => {
+//     history.replace('/');
+//   });
+// }
+
+
+
+
   const handleAddFormSubmit = (event) => {
+    //----POST---->>>>
     event.preventDefault();
 
     const newItem = {
@@ -71,6 +110,36 @@ const Table = () => {
     };
 
     const newItems = [...items, newItem];
+
+// ADDED POST FUNCTION
+
+
+  // fetch("/events", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(formData),
+    
+  // })
+  //   .then((r) => r.json())
+  //   .then((newItem) => {
+  //     setItems(newItem);
+  //     // onAddSpice(newEvent);
+  //   });
+
+   
+  //   fetch('https://phase-2-project-599c2-default-rtdb.firebaseio.com/movies.json',
+  // {
+  //  method:'POST',
+  //  body:JSON.stringify(newItems),
+  //  headers:{
+  //         'Content-Type':'application/json'
+  //  }
+  // }
+  // ).then((r) => r.json()
+  // .then(console.log(r)));
+//--------->>>>
     setItems(newItems);
   };
 

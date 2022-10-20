@@ -1,4 +1,5 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
+
 import { nanoid } from "nanoid";
 import "../../App.css";
 import data from "./mock-data.json";
@@ -27,6 +28,15 @@ function RequestTable() {
     quantity: "",
     date: "",
   });
+
+  // useEffect(() => {
+  //   // auto-login
+  //   fetch("http://127.0.0.1:3000/requests").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((item) => setRequest(item));
+  //     }
+  //   });
+  // },[]);
 
   const [editItemId, setEditContactId] = useState(null);
 
