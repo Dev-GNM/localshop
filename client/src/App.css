@@ -58,11 +58,14 @@
   margin-top: -50px;
   margin-bottom:50px;
   border:  1px solid red;
-  padding: 10px;
+  padding: 5px;
+ 
 }
 input{
   padding: 10px;
   margin: 5px;
+  /* border: 1px solid red; */
+
 }
 .clerk-input{
   display: flex;
@@ -106,7 +109,7 @@ td {
   border: 1px solid #ffffff;
   text-align: left;
   padding: 8px;
-  font-size: 32px;
+  font-size: 33px;
 }
 
 th {
@@ -128,7 +131,7 @@ form td:last-child {
 }
 
 form * {
-  font-size: 11px;
+  font-size: 10px;
 }
 
 @keyframes App-logo-spin {
