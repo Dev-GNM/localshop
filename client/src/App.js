@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 import { Route, Routes } from "react-router";
 import MerchantPage from "./pages/MerchantPage";
 import StorePage from "./pages/StorePage";
+import ClerkPage from './components/ClerkPage';
 
 
 
@@ -39,6 +40,7 @@ function App() {
           }
         ></Route>
         <Route path="/storepage/:storeId" element={<StorePage />}></Route>
+        <Route path="/clerkpage" element={<ClerkPage/>}></Route>
       </Routes>
     </div>
   );
