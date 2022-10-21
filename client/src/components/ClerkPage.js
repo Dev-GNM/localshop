@@ -1,4 +1,5 @@
 import React from 'react'
+import "../App.css"
 import {useState,useEffect} from "react"
 import Table from "./ItemsTables/Table"
 import RequestTable from './RequestItemTable.js/RequestTable';
@@ -45,8 +46,8 @@ function ClerkPage() {
           <div className="clerk-banner"><h1 className='clerk-title'>Clerk Page</h1></div>
                 <div class="clerk-container">
           <div class="clerk-navbar">
-            <button className="add-btn" onClick={handleClick}> Add Items +</button>
-            <button className="add-btn" onClick={handleRequest}> Request Items +</button>
+            <button className="add-btn" onClick={handleClick}> Add Items</button>
+            <button className="add-btn" onClick={handleRequest}> Request Items</button>
             <button className="add-btn"> Logout</button>
             </div>
           {isTrue ?<Table/> :null}

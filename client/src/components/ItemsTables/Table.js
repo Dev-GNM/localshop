@@ -1,7 +1,6 @@
 import React, { useState, Fragment, useEffect } from "react";
-
-import { nanoid } from "nanoid";
 import "../../App.css";
+import { nanoid } from "nanoid";
 import data from "./mock-data.json";
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
@@ -44,7 +43,7 @@ const Table = () => {
   //   // auto-login
   //   fetch("http://127.0.0.1:3000/items").then((r) => {
   //     if (r.ok) {
-  //       r.json().then((item) => setItems(item));
+  //       r.json().then((item) => setItem(item));
   //     }
   //   });
   // },[]);
