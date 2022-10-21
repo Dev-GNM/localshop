@@ -28,25 +28,11 @@ function StorePage() {
     <div>
       <NavBar />
 
-<<<<<<< HEAD
-    },[storeId])
-
-    console.log(mStore)
-
-    return (
-        <div>
-            {mStore.name}
-            <p>paid and not paid</p>
-            <ProductTable storeId={storeId}/>
-        </div>
-    );
-=======
       {mStore.name}
       <p>paid and not paid</p>
       <ProductTable />
     </div>
   );
->>>>>>> 658bc94a5eab7b9c2e20bc90e4639ad73b3d14c6
 }
 
 export default StorePage;
