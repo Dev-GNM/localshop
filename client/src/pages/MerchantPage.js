@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import AdminForm from "../components/AdminForm";
+import AdminList from '../components/AdminList';
+import StoreReports from "../components/StoreReports";
+import StoreReportsTable from '../components/StoreReportsTable'
 
 function MerchantPage() {
+ const[showAdmin, setSetShowAdmin] =useState(false)
+ const[showAdminList, setSetShowAdminList] =useState(false)
+ const[showStoreReports, setShowStoreReports] = useState(false)
+ const[showReportsTable, setShowStoreReportsTable] = useState(false)
   return (
     <div>
       {/* top navigation bar */}
@@ -101,22 +108,37 @@ function MerchantPage() {
                 className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                 id="menu"
               >
-                <li className="nav-item">
+               
+                  <div>
+                <li className="nav-item"  onClick={()=> {
+                       setShowStoreReports(false)
+                       setShowStoreReportsTable(false)
+                       setSetShowAdminList(false)
+                      setSetShowAdmin(true)} } >
                   <a href="#" className="nav-link align-middle px-0">
                     <i className="fs-4 bi-house"></i>{" "}
                     <span className="ms-1 d-none d-sm-inline">Admin</span>
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="nav-link px-0 align-middle">
+                <li  >
+                  <a onClick={()=> {
+                     setSetShowAdmin(false)
+                     setShowStoreReports(false)
+                     setShowStoreReportsTable(false)
+                      setSetShowAdminList(true)}} href="#" className="nav-link px-0 align-middle">
                     <i className="fs-4 bi-table"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">Admins List</span>
+                    <span  className="ms-1 d-none d-sm-inline">Admins List</span>
                   </a>
                 </li>
                 <li>
                   <a href="#" className="nav-link px-0 align-middle">
                     <i className="fs-4 bi-table"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">
+                    <span onClick={()=>{
+                       setSetShowAdmin(false)
+                       setShowStoreReports(true)
+                       setShowStoreReportsTable(false)
+                       setSetShowAdminList(false)
+                    }}  className="ms-1 d-none d-sm-inline">
                       Store Reports
                     </span>
                   </a>
@@ -125,12 +147,18 @@ function MerchantPage() {
                 <li>
                   <a href="#" className="nav-link px-0 align-middle">
                     <i className="fs-4 bi-table"></i>{" "}
-                    <span className="ms-1 d-none d-sm-inline">
+                    <span onClick={()=>{
+                       setSetShowAdmin(false)
+                       setShowStoreReports(false)
+                       setShowStoreReportsTable(true)
+                       setSetShowAdminList(false)
+                    }} className="ms-1 d-none d-sm-inline">
                       Store Reports Table
                     </span>
                   </a>
                 </li>
-
+                </div>
+             
                 <li>
                   <a href="#" className="nav-link px-0 align-middle">
                     <i className="fs-4 bi-people"></i>{" "}
@@ -142,7 +170,18 @@ function MerchantPage() {
             </div>
           </nav>
           <div className="col py-3">
-            <h4>Dashboard white space</h4>
+
+            {showAdminList ? (
+            <AdminList/>
+            ) : null}
+            {showStoreReports ? (
+            <StoreReports/>
+            ):null}
+            {showReportsTable ? (
+            <StoreReportsTable/>
+            ) :null}
+      
+
           </div>
         </div>
       </div>

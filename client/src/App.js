@@ -3,7 +3,8 @@ import { useState, useCallback } from "react";
 import { Route, Routes } from "react-router";
 import MerchantPage from "./pages/MerchantPage";
 import StorePage from "./pages/StorePage";
-import ClerkPage from './components/ClerkPage';
+import AdminList from './components/AdminList';
+import ClerkPage from './ClerkPage';
 
 
 
@@ -27,19 +28,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route
-          path="/merchantpage"
-          element={
-            <MerchantPage
-              admins={admins}
-              getAdmins={getAdmins}
-              mStores={mStores}
-              getmStores={getmStores}
-              onAddAdmin={onAddAdmin}
-            />
-          }
-        ></Route>
+        <Route path="/merchantpage"element={<MerchantPage admins={admins} getAdmins={getAdmins} mStores={mStores} getmStores={getmStores} onAddAdmin={onAddAdmin}/>}></Route>
         <Route path="/storepage/:storeId" element={<StorePage />}></Route>
+        <Route path="/adminform" element={<AdminList/>}></Route>
         <Route path="/clerkpage" element={<ClerkPage/>}></Route>
       </Routes>
     </div>

@@ -11,6 +11,26 @@ function ClerkPage() {
   const[isTrue,setIsTrue]=useState(true)
   const[request,setRequest]=useState(null)
 
+
+
+
+  // useEffect(() => {
+  //   fetch(`http://127.0.0.1:3000/items`)
+  //     .then((r) => r.json())
+  //     .then(console.log);
+  // }, []);
+
+  
+  //   useEffect(() => {
+  //   // auto-login
+  //   fetch("http://127.0.0.1:3000/items").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((item) => console.log(item));
+  //     }
+  //   });
+  // },[]);
+
+
   function handleClick(){
     setRequest(null)
     setIsTrue(!isTrue)
