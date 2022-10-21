@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router";
 import MerchantPage from "./pages/MerchantPage";
 import StorePage from "./pages/StorePage";
 import AdminList from './components/AdminList';
-import ClerkPage from './ClerkPage';
+import ClerkPage from './components/ClerkPage';
 
 
 
