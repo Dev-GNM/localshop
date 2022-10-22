@@ -1,0 +1,42 @@
+{
+  "admins": [
+    {
+      "id": 2,
+      "fullname": "Fred Matiangi",
+      "email": "matiangs0@gmail.com",
+      "store": "hakunamatata1"
+    },
+    {
+      "fullname": "peter ndumia",
+      "email": "ndumia@gmail.com",
+      "store": "one stop",
+      "id": 4
+    }
+  ],
+  "stores": [
+    {
+      "id": 1,
+      "name": "hakunamatata",
+      "items": [
+        {
+          "id": 1,
+          "name": "one",
+          "quantity": 10,
+          "paymentstatus": "paid"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "hakunamatata2",
+      "items": [
+        {
+          "id": 1,
+          "name": "one",
+          "quantity": 10,
+          "paymentstatus": "notpaid"
+        }
+      ]
+    }
+  ]
+}

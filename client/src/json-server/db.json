@@ -1,0 +1,44 @@
+{
+  "inventories": [
+    {
+      "id": 1,
+      "name": "Cooking Oil",
+      "quantity": 100,
+      "spoilt": 0,
+      "instock": 50,
+      "buyingPrice": 200,
+      "sellingPrice": 250,
+      "status": "paid"
+    },
+    {
+      "id": 2,
+      "name": "Bread",
+      "quantity": 50,
+      "spoilt": 2,
+      "instock": 20,
+      "buyingPrice": 50,
+      "sellingPrice": 65,
+      "status": "not paid"
+    },
+    {
+      "id": 3,
+      "name": "Milk",
+      "quantity": 100,
+      "spoilt": 5,
+      "instock": 50,
+      "buyingPrice": 60,
+      "sellingPrice": 70,
+      "status": "paid"
+    },
+    {
+      "id": 4,
+      "name": "Sugar",
+      "quantity": 100,
+      "spoilt": 5,
+      "instock": 50,
+      "buyingPrice": 60,
+      "sellingPrice": 70,
+      "status": "paid"
+    }
+  ]
+}
