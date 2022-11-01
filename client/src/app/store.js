@@ -6,6 +6,6 @@ import OrderReducer from '../features/orders/OrderSlice'
 export const store = configureStore({
   reducer: {
     items: ItemReducer,
-    orders: OrderReducer
+    orders: OrderReducer,
   },
 })
