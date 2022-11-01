@@ -36,7 +36,7 @@ function App() {
        <Route path='/orders' element={<OrderForm/>} />
        <Route path='/addItems' element={<Table/>} />
        <Route path='/addRequests' element={<RequestTable/>} />
-       <Route path="/clerks" element={<Clerk />}></Route>
+       <Route path="/clerks" element={<Clerk setClerkUser={setClerkUser} />}></Route>
        
        <Route path='/oldPage' element={<ClerkPage/>} />
 
@@ -44,7 +44,7 @@ function App() {
 
        <Route path='/mlog-in' element={<MerchantLogIn user={user} setUser={setUser} />} />
        <Route path='/alog-in' element={<AdminLogin adminUser={adminUser} setAdminUser={setAdminUser}/>} />
-       <Route path='/clog-in' element={<ClerkLogin/>} />
+       <Route path='/clog-in' element={<ClerkLogin setClerkUser={setClerkUser} />} />
        <Route path='/Register' element={<Register setUser={setUser} />} />
         <Route path="/inventories" element={<Inventory setClerkUser={setClerkUser} />} />
         <Route path='/analytics' element={<InventoryAnalytics/>}/>

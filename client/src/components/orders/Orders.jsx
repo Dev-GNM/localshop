@@ -5,7 +5,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([])
     
     useEffect(() => {
-        fetch('http://localhost:3000/requested_items')
+        fetch('/requested_items')
             .then((res) => res.json())
             .then((data) => {
                 console.log(data)
@@ -13,6 +13,7 @@ const Orders = () => {
         })
     },[])
   return (
+    
     <div className='container'>
     <div className="row">
         <div className="col-md-10 offset-md-2">

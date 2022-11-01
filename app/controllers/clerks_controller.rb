@@ -42,7 +42,7 @@ class ClerksController < ApplicationController
       end
 
       def clerk_params
-          params.permit(:full_name, :email, :password_digest, :admin_id)
+          params.permit(:full_name, :email, :password, :admin_id)
       end
 
       def render_unprocessable_entity_response(invalid)

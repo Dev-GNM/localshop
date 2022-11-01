@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Grid from '@mui/material/Grid'
 import { useNavigate } from 'react-router-dom'
+import SideBar from "../sidebar/SideBar";
 
 
 const Clerks= ({setClerkUser}) => {
@@ -13,7 +14,7 @@ const Clerks= ({setClerkUser}) => {
   const [formData, setFormData] = useState({
     full_name: '',
     email:'',
-    password_digest:'',
+    password:'',
     admin_id: adminId
 
   })
@@ -60,6 +61,7 @@ const Clerks= ({setClerkUser}) => {
   
   return (
     <>
+      <SideBar />
     <Grid item xs={8}>
       <div className='container'>
         <div className="row mt-5">
@@ -105,9 +107,9 @@ const Clerks= ({setClerkUser}) => {
                 <div className="row">
                   
                   <div className="col">
-                    <input type="password"
-                      name="password_digest"
-                      value={formData.password_digest}
+                    <input type="text"
+                      name="password"
+                      value={formData.password}
                       onChange={(e) => handleChange(e)}
                       placeholder='password'
                       className="form-control"
